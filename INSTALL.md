@@ -34,5 +34,15 @@ When a new version is out, the menu bar menu shows **Update Available**. Click i
 ## Problems?
 Menu bar → Settings → About → **Report a bug** opens a GitHub issue with recent (content-free) log lines filled in. Read it before posting: issues are public.
 
+## Quit
+Any of these:
+- Press **⌘Q** in any LittleCursor window.
+- Click **Quit** at the bottom of Settings, or the ⏻ button in Home (hover the notch).
+- Menu bar icon → **Quit LittleCursor**.
+
+Can't find any of them (the menu bar icon can hide behind the notch)? Double-click LittleCursor in Applications: while it's running, that opens Settings.
+
 ## Uninstall
-Quit it from the menu bar, delete it from Applications, and (to remove all data) delete `~/Library/Application Support/AICursor` and `~/Library/Logs/AICursor.log`.
+Settings → About → **Uninstall LittleCursor…** quits it, moves it to the Bin and deletes everything it stored on your Mac.
+
+(Dragging it to the Bin while it's running doesn't work: macOS says it's open. Quit it first. On 0.3.0, if you're stuck: open Terminal and run `killall AICursor`, then drag it to the Bin.)
