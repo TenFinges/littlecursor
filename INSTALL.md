@@ -1,6 +1,6 @@
 # Installing LittleCursor (public beta)
 
-Works on any Mac (Apple Silicon or Intel) running **macOS 14 Sonoma or newer**. Free. You bring a free Gemini key from Google.
+Works on any Mac (Apple Silicon or Intel) running **macOS 14 Sonoma or newer**. Free, and nothing to sign up for.
 
 ## 1. Install
 1. Download `LittleCursor-<version>.zip` from the [latest release](https://github.com/TenFinges/littlecursor/releases/latest) and unzip it.
@@ -12,8 +12,9 @@ Works on any Mac (Apple Silicon or Intel) running **macOS 14 Sonoma or newer**. 
 LittleCursor lives in the **menu bar** (a cursor icon, top right). It has no Dock icon.
 
 ## 2. Set up (the welcome tour walks you through it)
-1. **Gemini key**: click "Get a free key (I'll show you how)" and it guides you through Google AI Studio, or paste a key you already have from <https://aistudio.google.com/apikey>.
-   - Already pay for Claude Pro/Max and have Claude Code installed? Settings → Account → "Use my Claude plan" works instead.
+1. **Start free**: LittleCursor uses its own free AI, so there's no key and no account (150 questions a month).
+   - Have Claude Code installed and signed in? The tour offers "Use my Claude plan instead".
+   - Have your own Gemini key? "I have my own Gemini key" makes it unlimited.
 2. **Permissions**: grant what you want to use. Each is explained when asked.
    - Screen Recording: lets it see your screen when you ask (then click **Relaunch**)
    - Microphone and Speech Recognition: voice questions and dictation
@@ -29,7 +30,9 @@ It only looks at your screen and listens while you're asking something.
 - **Esc** interrupts. Every shortcut can be changed in Settings → Shortcuts.
 
 ## Updates
-When a new version is out, the menu bar menu shows **Update Available**. Click it, download the new zip, and replace the app in Applications (quit LittleCursor first). Your settings and key are kept.
+From 0.4.0 on, LittleCursor updates itself: it downloads new versions in the background and installs them the next time it quits. To update right away, choose **Restart to Update** in the menu bar menu. Your settings and permissions are kept.
+
+On 0.3.x? Download 0.4.0 once from the [latest release](https://github.com/TenFinges/littlecursor/releases/latest) and replace the app in Applications (quit LittleCursor first). After that, updates are automatic.
 
 ## Problems?
 Menu bar → Settings → About → **Report a bug** opens a GitHub issue with recent (content-free) log lines filled in. Read it before posting: issues are public.
@@ -37,6 +40,7 @@ Menu bar → Settings → About → **Report a bug** opens a GitHub issue with r
 ## Quit
 Any of these:
 - Press **⌘Q** in any LittleCursor window.
+- Right-click the notch (or the small pill at the top of the screen) and choose **Quit LittleCursor**.
 - Click **Quit** at the bottom of Settings, or the ⏻ button in Home (hover the notch).
 - Menu bar icon → **Quit LittleCursor**.
 

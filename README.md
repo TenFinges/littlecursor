@@ -7,10 +7,10 @@ An AI that sits by your cursor on your Mac. Press **⌥ Space**, ask about whate
 ## Install
 Unzip, drag **LittleCursor.app** to Applications, and open it. The beta isn't signed by Apple yet, so the first time macOS blocks it: go to **System Settings → Privacy & Security → Open Anyway**. Full steps: [INSTALL.md](INSTALL.md).
 
-You'll need a free Gemini API key from Google (the welcome tour walks you through getting one in about a minute), or a Claude Pro/Max plan with Claude Code installed.
+Nothing to set up: it works out of the box on LittleCursor's free AI, with no account. If you have Claude Code signed in, or your own Gemini key, you can use those instead.
 
 ## Privacy
-Your screen is only captured when you ask something, and it goes straight from your Mac to the model you chose (Google Gemini with your own key, or Claude Code). There's no LittleCursor server in this beta. Details: [PRIVACY.md](PRIVACY.md).
+Your screen is only captured when you ask something. On the free AI it passes through our server to Google Gemini without being stored or logged; with your own key or Claude Code it goes straight from your Mac to that provider. Details: [PRIVACY.md](PRIVACY.md).
 
 ## Feedback and bugs
 [Open an issue](https://github.com/TenFinges/littlecursor/issues/new), or use Settings → About → Report a bug in the app.
