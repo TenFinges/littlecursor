@@ -1,61 +1,72 @@
-# Installing LittleCursor (public beta)
+# Install LittleCursor
 
-Works on any Mac (Apple Silicon or Intel) running **macOS 14 Sonoma or newer**. Free, and nothing to sign up for.
+**Needs:** macOS 14 or newer, Apple Silicon or Intel. Free, no account.
 
-## 1. Install
-1. Download `LittleCursor-<version>.zip` from the [latest release](https://github.com/TenFinges/littlecursor/releases/latest) and unzip it.
-2. Drag **LittleCursor.app** into your **Applications** folder. (Do this first. Opening it from Downloads causes permission trouble.)
-3. Open it. This beta isn't signed by Apple yet, so macOS blocks it the first time:
-   - Click **Done** on the warning, then open **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to "LittleCursor", and confirm with your password.
-   - *(Or in Terminal: `xattr -dr com.apple.quarantine /Applications/LittleCursor.app`, then open it normally.)*
+## 1. Download
+**[⬇ Download the latest LittleCursor](https://github.com/TenFinges/littlecursor/releases/latest)** → under **Assets**, click `LittleCursor-x.y.z.zip`.
 
-LittleCursor shows up in the **Dock** and the **menu bar** (a cursor icon, top right). Click the Dock icon for Settings; right-click it for Talk, Home, Uninstall and Quit.
+## 2. Move it to Applications
+Double-click the zip, then drag **LittleCursor.app** into **Applications**.
 
-## 2. Set up (the welcome tour walks you through it)
-1. **Start free**: LittleCursor uses its own free AI, so there's no key and no account (150 questions a month).
-   - Have Claude Code installed and signed in? The tour offers "Use my Claude plan instead".
-   - Have your own Gemini key? "I have my own Gemini key" makes it unlimited.
-2. **Permissions**: grant what you want to use. Each is explained when asked.
-   - Screen Recording: lets it see your screen when you ask (then click **Relaunch**)
-   - Microphone and Speech Recognition: voice questions and dictation
-   - Accessibility: typing dictation and drafts into other apps (optional)
+![Unzip, then drag LittleCursor.app into Applications](images/install.svg)
 
-It only looks at your screen and listens while you're asking something.
+## 3. Open it (first time only)
+Open LittleCursor from Applications. macOS blocks it the first time because the beta isn't signed by Apple yet:
+1. Click **Done** on the warning.
+2. Open **System Settings → Privacy & Security**, scroll down, click **Open Anyway**.
+3. Enter your Mac password, then click **Open**.
+
+![System Settings → Privacy & Security → Open Anyway](images/open-anyway.svg)
+
+> Prefer Terminal? `xattr -dr com.apple.quarantine /Applications/LittleCursor.app`, then open it normally.
+
+## 4. Allow permissions
+The welcome tour asks for each one. After **Screen Recording**, click **Relaunch**.
+
+![Screen Recording, Microphone, Speech Recognition, Accessibility](images/permissions.svg)
+
+LittleCursor only looks at your screen and listens while you're asking something.
+
+## 5. Use it
+
+![Keyboard shortcuts](images/shortcuts.svg)
+
+- **Esc** stops an answer (sent something by mistake?). Press again to clear the drawings, again to close. Closed it by mistake? Click **Undo** on the message that appears.
+- Change any shortcut in **Settings → Shortcuts**.
+
+LittleCursor lives in the **Dock** and the **menu bar**. Click the Dock icon for Settings.
+
+---
 
 ## Use your Claude plan (optional)
-Have Claude Pro or Max? LittleCursor can answer with Claude through **Claude Code**, Anthropic's command-line tool (the Claude desktop app alone isn't enough):
-1. In Terminal: `curl -fsSL https://claude.ai/install.sh | bash`
-2. Run `claude` once and sign in with your Claude account, then quit it (`/exit`).
-3. In LittleCursor: the welcome tour shows **Use my Claude plan instead**, or turn it on in Settings → Account → Use your Claude plan (click **Check again** if it says it isn't installed).
+Have **Claude Pro or Max**? Answers can come from Claude instead of the free AI.
 
-Answers then use your Claude plan's usage. Screenshots go from your Mac to Anthropic through Claude Code, never through LittleCursor's server.
+![Install Claude Code, sign in, then turn on Use your Claude plan](images/claude.svg)
 
-## 3. Use it
-- **⌥ Space**: ask about whatever's on screen. "This" or "here" means what your mouse is on.
-- **⌥ ⇧ T**: type a question instead.
-- Hold **⌃ ⌥** and move the mouse to circle something while you talk.
-- Hold **fn ⌃** to dictate into any app.
-- **Esc** interrupts. Every shortcut can be changed in Settings → Shortcuts.
+1. Open **Terminal** and run:
+   ```
+   curl -fsSL https://claude.ai/install.sh | bash
+   ```
+2. Run `claude`, sign in with your Claude account, then type `/exit`.
+3. In LittleCursor: **Settings → Account → Use your Claude plan** → turn it on. Says it isn't installed? Click **Check again**.
+
+The Claude desktop app alone isn't enough: this uses Claude Code. Screenshots go from your Mac to Anthropic, never through LittleCursor's server.
+
+## Your own Gemini key (optional)
+Get a free key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey), then paste it in **Settings → Account**. No monthly limit.
+
+---
 
 ## Updates
-From 0.4.0 on, LittleCursor updates itself: it downloads new versions in the background and installs them the next time it quits. To update right away, choose **Restart to Update** in the menu bar menu. Your settings and permissions are kept.
+Automatic. New versions download in the background and install the next time LittleCursor quits. To update now: menu bar icon → **Restart to Update**.
 
-On 0.3.x? Download 0.4.0 once from the [latest release](https://github.com/TenFinges/littlecursor/releases/latest) and replace the app in Applications (quit LittleCursor first). After that, updates are automatic.
-
-## Problems?
-Menu bar → Settings → About → **Report a bug** opens a GitHub issue with recent (content-free) log lines filled in. Read it before posting: issues are public.
+On 0.3.x? Download the latest once and replace the app (quit it first). Updates are automatic after that.
 
 ## Quit
-Any of these:
-- Right-click the LittleCursor icon in the Dock and choose **Quit**.
-- Press **⌘Q** in any LittleCursor window.
-- Right-click the notch (or the small pill at the top of the screen) and choose **Quit LittleCursor**.
-- Click **Quit** at the bottom of Settings, or the ⏻ button in Home (hover the notch).
-- Menu bar icon → **Quit LittleCursor**.
-
-Can't find any of them (the menu bar icon can hide behind the notch)? Double-click LittleCursor in Applications: while it's running, that opens Settings.
+**⌘Q twice**, the Dock icon (right-click → **Quit**), or **Quit** at the bottom of Settings.
 
 ## Uninstall
-Settings → About → **Uninstall LittleCursor…** quits it, moves it to the Bin and deletes everything it stored on your Mac.
+**Settings → About → Uninstall LittleCursor…** removes the app and everything it stored.
 
-(Dragging it to the Bin while it's running doesn't work: macOS says it's open. Quit it first. On 0.3.0, if you're stuck: open Terminal and run `killall AICursor`, then drag it to the Bin.)
+## Problems
+**Settings → About → Report a bug**, or [open an issue](https://github.com/TenFinges/littlecursor/issues/new). Issues are public, so read before posting.

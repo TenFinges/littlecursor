@@ -1,18 +1,32 @@
 # LittleCursor
 
-An AI that sits by your cursor on your Mac. Press **⌥ Space**, ask about whatever's on screen, and it answers right there, drawing boxes and arrows on your screen as it explains. It can also take dictation into any app and run longer jobs in the background.
+An AI that lives by your cursor on your Mac. Hold **⌃ Space**, ask about anything on your screen, and it answers right there, drawing on your screen as it explains.
 
-**[⬇ Download the latest version](https://github.com/TenFinges/littlecursor/releases/latest)** · macOS 14+ · Apple Silicon and Intel · free public beta
+**[⬇ Download](https://github.com/TenFinges/littlecursor/releases/latest)** · macOS 14+ · Apple Silicon and Intel · free beta, no account
 
-## Install
-Unzip, drag **LittleCursor.app** to Applications, and open it. The beta isn't signed by Apple yet, so the first time macOS blocks it: go to **System Settings → Privacy & Security → Open Anyway**. Full steps: [INSTALL.md](INSTALL.md).
+## Install in 3 steps
 
-Nothing to set up: it works out of the box on LittleCursor's free AI, with no account. If you have Claude Code signed in, or your own Gemini key, you can use those instead.
+![Unzip, then drag LittleCursor.app into Applications](images/install.svg)
+
+1. [Download](https://github.com/TenFinges/littlecursor/releases/latest) the zip and double-click it.
+2. Drag **LittleCursor.app** into **Applications** and open it.
+3. First time only: **System Settings → Privacy & Security → Open Anyway**.
+
+Full guide with pictures: **[INSTALL.md](INSTALL.md)**
+
+## Shortcuts
+
+![Keyboard shortcuts](images/shortcuts.svg)
+
+## Which AI it uses
+- **Free AI** (default): works right away, 150 questions a month.
+- **Your Claude plan** (Pro/Max): [set up in 3 steps](INSTALL.md#use-your-claude-plan-optional).
+- **Your own Gemini key**: [no limit](INSTALL.md#your-own-gemini-key-optional).
 
 ## Privacy
-Your screen is only captured when you ask something. On the free AI it passes through our server to Google Gemini without being stored or logged; with your own key or Claude Code it goes straight from your Mac to that provider. Details: [PRIVACY.md](PRIVACY.md).
+It only sees your screen while you're asking. Your screen, voice and questions are never stored on our server. [PRIVACY.md](PRIVACY.md)
 
-## Feedback and bugs
-[Open an issue](https://github.com/TenFinges/littlecursor/issues/new), or use Settings → About → Report a bug in the app.
+## Help
+[Open an issue](https://github.com/TenFinges/littlecursor/issues/new), or **Settings → About → Report a bug**.
 
 This repository holds releases only; the source isn't public.

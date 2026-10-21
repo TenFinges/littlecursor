@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="330" viewBox="0 0 820 330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="820" height="330" rx="20" fill="#0f0e16"/>
+  <!-- window -->
+  <rect x="40" y="30" width="740" height="250" rx="14" fill="#1e1d24" stroke="#3a3946"/>
+  <circle cx="64" cy="52" r="6" fill="#ff5f57"/><circle cx="84" cy="52" r="6" fill="#febc2e"/><circle cx="104" cy="52" r="6" fill="#28c840"/>
+  <text x="410" y="57" fill="#c9c7d6" font-size="14" font-weight="600" text-anchor="middle">System Settings</text>
+  <!-- sidebar -->
+  <rect x="52" y="78" width="180" height="190" rx="8" fill="#17161c"/>
+  <text x="68" y="106" fill="#8d8b9c" font-size="13">General</text>
+  <text x="68" y="132" fill="#8d8b9c" font-size="13">Appearance</text>
+  <rect x="60" y="144" width="164" height="26" rx="6" fill="#3a6df0"/>
+  <text x="68" y="162" fill="#fff" font-size="13" font-weight="600">Privacy &amp; Security</text>
+  <text x="68" y="190" fill="#8d8b9c" font-size="13">Desktop &amp; Dock</text>
+  <text x="68" y="216" fill="#8d8b9c" font-size="13">Displays</text>
+  <!-- content -->
+  <text x="256" y="104" fill="#f4f2ff" font-size="17" font-weight="700">Privacy &amp; Security</text>
+  <text x="256" y="132" fill="#8d8b9c" font-size="12.5">Scroll down to Security</text>
+  <rect x="256" y="148" width="508" height="96" rx="10" fill="#26252e"/>
+  <text x="274" y="176" fill="#e8e6f2" font-size="14">“LittleCursor” was blocked to protect your Mac.</text>
+  <rect x="616" y="196" width="128" height="32" rx="8" fill="#3a6df0"/>
+  <text x="680" y="217" fill="#fff" font-size="14" font-weight="600" text-anchor="middle">Open Anyway</text>
+  <rect x="608" y="188" width="144" height="48" rx="12" fill="none" stroke="#ff8a5c" stroke-width="3"/>
+  <text x="410" y="312" fill="#a8a6bf" font-size="13.5" text-anchor="middle">Click Open Anyway, enter your Mac password, then Open. Only needed the first time.</text>
+</svg>

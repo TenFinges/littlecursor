@@ -1,32 +1,37 @@
-# LittleCursor privacy (public beta)
+# Privacy
 
-Last updated: 2026-10-21. This describes what the beta app actually does.
+Last updated: 2026-10-21. This is what the app actually does.
 
-## The short version
-- LittleCursor looks at your screen and listens **only while you're asking something**.
-- Out of the box, LittleCursor answers with **LittleCursor's free AI**: your question and screenshot pass through our server (a Cloudflare Worker) on their way to Google's Gemini. The server **doesn't store or log** your screen, voice, questions or answers; it keeps only how many requests your install has used this month. No account, email or name is needed.
-- With your own Gemini key, or your Claude plan, requests go straight from your Mac to that provider and never touch our server.
-- There is **no analytics or telemetry**.
+## In short
+- LittleCursor sees your screen and hears you **only while you're asking something**.
+- **No analytics, no tracking, no account.**
+- Your screen, voice, questions and answers are **never stored** on our server.
 
-## What goes where
-| What | When | Where it goes |
-|---|---|---|
-| A screenshot of your screen (and a close-up near your cursor) | Each time you ask a question | The AI provider, for that one answer |
-| Your question (typed, or a short audio clip + transcript) | Each question | The AI provider |
-| Recent conversation and your project notes | Each question, as context | The AI provider |
-| Text on screen (read on your Mac with Apple's Vision) | Each question | Stays on your Mac, except text you select in Click & Type |
-| An anonymous install token and monthly usage counts | When the app first starts, then with each question on the free AI | Our server (Cloudflare D1). Delete it any time in Settings → Account → Delete account. |
-| A version check, and the new version's download | Once a day | GitHub (`api.github.com` and GitHub's download servers), to see if a new version exists and fetch it. Nothing about you is sent beyond a normal web request. |
+## Where your question goes
 
-**AI providers.** With LittleCursor's free AI (the default), requests go to our Worker and from there to Google under our key; the Worker sends Google `store: false` and streams the answer back. Our key is currently on Google's free tier, under which Google may use content to improve its products; use your own paid key or your Claude plan if that matters to you. To stop one network from creating endless free installs, the Worker briefly keeps a keyed hash of your IP address (never the address itself) when an install starts, and deletes it after two days. With your own Gemini key, requests go to Google (`generativelanguage.googleapis.com`) under your key and [Google's terms](https://ai.google.dev/gemini-api/terms); the app asks Google not to store the interaction (`store: false`). Note that on Google's free tier, Google may use content to improve its products. If you choose "Use my Claude plan", requests go through the Claude Code app on your Mac to Anthropic under your own Claude login and Anthropic's terms.
+| You use | Your screenshot + question go to |
+|---|---|
+| Free AI (default) | Our server (a Cloudflare Worker), which passes them to Google Gemini and back. Nothing is kept. |
+| Your Claude plan | Straight from your Mac to Anthropic, through Claude Code. Never our server. |
+| Your own Gemini key | Straight from your Mac to Google. Never our server. |
+
+Each question sends: a screenshot (plus a close-up near your cursor), your question (text, or a short audio clip and its transcript), and recent conversation and project notes as context. The app asks Google not to store requests (`store: false`).
+
+**Free-tier note:** the free AI runs on Google's free tier, where Google may use content to improve its products. If that matters to you, use your own paid Gemini key or your Claude plan.
+
+## What our server keeps
+- An anonymous install token and how many questions it used this month. Delete it any time: **Settings → Account → Delete account**.
+- When an install first starts, a keyed hash of your IP address (never the address itself), to stop endless free installs. Deleted after two days.
 
 ## What stays on your Mac
-In `~/Library/Application Support/AICursor/`: settings, your install token and your Gemini key (in a file only your user can read; it moves to the macOS Keychain once the app is signed by Apple), recent conversation (text only, last 24 turns per project), project notes, agent files and monthly usage counts. The log at `~/Library/Logs/AICursor.log` records timings and errors, not what you say or type.
+In `~/Library/Application Support/AICursor/`: settings, your install token, your Gemini key (readable only by your user), recent conversation (text only, last 24 turns per project), project notes, agent files and usage counts.
 
-Screenshots and audio are not saved (except a screenshot an agent was asked to work from, kept in that agent's folder).
+Text on your screen is read **on your Mac** (Apple's Vision). Screenshots and audio are not saved, except a screenshot you hand to an agent, kept in that agent's folder. The log (`~/Library/Logs/AICursor.log`) has timings and errors, never what you say or type.
 
-## Deleting your data
-Settings → Privacy erases each kind of local data. To remove everything, delete the app, `~/Library/Application Support/AICursor` and `~/Library/Logs/AICursor.log`.
+## Other connections
+Once a day the app asks GitHub whether a new version exists, and downloads it if so. Nothing about you is sent.
 
-## Contact
-Questions: [open an issue](https://github.com/TenFinges/littlecursor/issues/new).
+## Delete your data
+**Settings → Privacy** erases each kind of local data. **Settings → About → Uninstall** removes everything.
+
+Questions? [Open an issue](https://github.com/TenFinges/littlecursor/issues/new).
