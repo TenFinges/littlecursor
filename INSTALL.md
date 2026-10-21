@@ -21,7 +21,7 @@ Open LittleCursor from Applications. macOS blocks it the first time because the 
 > Prefer Terminal? `xattr -dr com.apple.quarantine /Applications/LittleCursor.app`, then open it normally.
 
 ## 4. Allow permissions
-The welcome tour asks for each one. After **Screen Recording**, click **Relaunch**.
+The welcome tour asks for each one. For **Screen Recording** and **Accessibility**, System Settings opens: flip the switch next to LittleCursor and the tour comes back by itself. If macOS asks to **Quit & Reopen**, do it: the tour picks up where you were.
 
 ![Screen Recording, Microphone, Speech Recognition, Accessibility](images/permissions.svg)
 
