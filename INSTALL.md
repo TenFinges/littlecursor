@@ -22,6 +22,14 @@ LittleCursor shows up in the **Dock** and the **menu bar** (a cursor icon, top r
 
 It only looks at your screen and listens while you're asking something.
 
+## Use your Claude plan (optional)
+Have Claude Pro or Max? LittleCursor can answer with Claude through **Claude Code**, Anthropic's command-line tool (the Claude desktop app alone isn't enough):
+1. In Terminal: `curl -fsSL https://claude.ai/install.sh | bash`
+2. Run `claude` once and sign in with your Claude account, then quit it (`/exit`).
+3. In LittleCursor: the welcome tour shows **Use my Claude plan instead**, or turn it on in Settings → Account → Use your Claude plan (click **Check again** if it says it isn't installed).
+
+Answers then use your Claude plan's usage. Screenshots go from your Mac to Anthropic through Claude Code, never through LittleCursor's server.
+
 ## 3. Use it
 - **⌥ Space**: ask about whatever's on screen. "This" or "here" means what your mouse is on.
 - **⌥ ⇧ T**: type a question instead.
