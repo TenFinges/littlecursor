@@ -9,7 +9,7 @@ Works on any Mac (Apple Silicon or Intel) running **macOS 14 Sonoma or newer**. 
    - Click **Done** on the warning, then open **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to "LittleCursor", and confirm with your password.
    - *(Or in Terminal: `xattr -dr com.apple.quarantine /Applications/LittleCursor.app`, then open it normally.)*
 
-LittleCursor lives in the **menu bar** (a cursor icon, top right). It has no Dock icon.
+LittleCursor shows up in the **Dock** and the **menu bar** (a cursor icon, top right). Click the Dock icon for Settings; right-click it for Talk, Home, Uninstall and Quit.
 
 ## 2. Set up (the welcome tour walks you through it)
 1. **Start free**: LittleCursor uses its own free AI, so there's no key and no account (150 questions a month).
@@ -39,6 +39,7 @@ Menu bar → Settings → About → **Report a bug** opens a GitHub issue with r
 
 ## Quit
 Any of these:
+- Right-click the LittleCursor icon in the Dock and choose **Quit**.
 - Press **⌘Q** in any LittleCursor window.
 - Right-click the notch (or the small pill at the top of the screen) and choose **Quit LittleCursor**.
 - Click **Quit** at the bottom of Settings, or the ⏻ button in Home (hover the notch).
