@@ -21,7 +21,7 @@ Each question sends: a screenshot (plus a close-up near your cursor), your quest
 
 ## What our server keeps
 - An anonymous install token and how many questions it used this month. Delete it any time: **Settings → Account → Delete account**.
-- When an install first starts, a keyed hash of your IP address (never the address itself), to stop endless free installs. Deleted after two days.
+- A keyed hash of your IP address (never the address itself): when an install first starts, to stop endless free installs, and with a count of free-AI questions from your network that day, so one network can't use up everyone's free AI. Deleted after two to three days.
 
 ## What stays on your Mac
 In `~/Library/Application Support/AICursor/`: settings, your install token, your Gemini key (readable only by your user), recent conversation (text only, last 24 turns per project), project notes, agent files and usage counts.

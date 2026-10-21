@@ -39,7 +39,7 @@ LittleCursor lives in the **Dock** and the **menu bar**. Click the Dock icon for
 ---
 
 ## Use your Claude plan (optional)
-Have **Claude Pro or Max**? Answers can come from Claude instead of the free AI.
+Have **Claude Pro or Max**? Answers can come from Claude instead of the free AI. The app walks you through it: **Have Claude Pro or Max? Use it** in the welcome tour, or **Settings → Account → Set up**. By hand:
 
 ![Install Claude Code, sign in, then turn on Use your Claude plan](images/claude.svg)
 
@@ -48,7 +48,7 @@ Have **Claude Pro or Max**? Answers can come from Claude instead of the free AI.
    curl -fsSL https://claude.ai/install.sh | bash
    ```
 2. Run `claude`, sign in with your Claude account, then type `/exit`.
-3. In LittleCursor: **Settings → Account → Use your Claude plan** → turn it on. Says it isn't installed? Click **Check again**.
+3. In LittleCursor: **Settings → Account → Use your Claude plan** → turn it on. It notices Claude Code by itself within a few seconds.
 
 The Claude desktop app alone isn't enough: this uses Claude Code. Screenshots go from your Mac to Anthropic, never through LittleCursor's server.
 
